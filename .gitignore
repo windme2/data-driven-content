@@ -1,0 +1,33 @@
+# Node.js Dependencies
+node_modules/
+
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Build Outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Logs & Temporary Files
+logs/
+*.log
+npm-debug.log*
+interaction_logs.json
+
+# OS Generate Files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Uploads Folder
+uploads/*
+!uploads/.gitkeep
