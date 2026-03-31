@@ -48,4 +48,15 @@ describe('Data-Driven Content API', () => {
     expect(res.body.data.type).toBe('LIKE');
     expect(res.body.data.userId).toBe('user_test_123');
   });
+
+  it('POST /action - should return 400 when sending invalid type', async () => {
+    const payload = {
+      userId: 'user_test_123',
+      videoId: '1',
+      type: 'INVALID_TYPE',
+    };
+    const res = await request(app).post('/action').send(payload);
+    expect(res.status).toBe(400);
+    expect(res.body.success).toBe(false);
+  });
 });
